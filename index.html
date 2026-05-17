@@ -2,13 +2,23 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Radio Centro - Donde vos estes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#ff007f" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="./1.jpeg" />
+    <title>Radio Centro - Donde vos estás</title>
     <!-- Importamos las variables desde la raíz -->
-    <script type="module" crossorigin src="./assets/index-D73AiWbE.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-qSNEtJK4.css">
+    <script type="module" crossorigin src="./assets/index-BrfRQrnV.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Bgtk_PK1.css">
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW registration failed:', err));
+        });
+      }
+    </script>
   </body>
 </html>
